@@ -50,7 +50,7 @@ to use and manage. Each type of users login will display a different window, res
 
 + Git command
     ```shell
-    git clone https://github.com/Chen-Huayi/Club-Membership-Management.git
+    git clone https://github.com/chuaii/club-membership-management.git
     ```
 
 **Run**
