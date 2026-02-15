@@ -42,7 +42,7 @@ exports.signup = (req, res) => {
     const {pay_now, amount, agreement, ...userInfo} = req.body  // delete agreement, and get payment condition
     const member_id = userInfo.member_id
 
-    memberModel.count({member_id}, (err, result) => {
+    memberModel.countDocuments({member_id}, (err, result) => {
         if (err) {
             return res.handleMessage(err)
         }

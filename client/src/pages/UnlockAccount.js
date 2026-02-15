@@ -35,7 +35,7 @@ export default function UnlockAccount() {
             labelCol={{span: 9}}
             wrapperCol={{span: 6}}
             form={form}
-            initialValues={{get_captcha: 1234}}
+            initialValues={{}}
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
             style={{paddingTop: 200}}

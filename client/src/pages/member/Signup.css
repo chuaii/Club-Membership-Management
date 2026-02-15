@@ -1,55 +1,3 @@
-/*.signup-formHolder {*/
-/*  display: block;*/
-/*  justify-content: center;*/
-/*  align-items: center;*/
-/*  height: 80vh;*/
-/*}*/
-
-/*.signup-form {*/
-/*  background-color: white;*/
-/*  width: 40vw;*/
-/*  border-radius: 2em;*/
-/*  padding: 1em 5em 1.5em 5em;*/
-/*  box-shadow: 0 1em 2em #083d77;*/
-/*  margin-left: auto;*/
-/*  margin-right: auto;*/
-/*}*/
-
-/*.signup-title {*/
-/*  color: #03305f;*/
-/*  font-size: 2em;*/
-/*  margin-bottom: 0.3em;*/
-/*}*/
-
-/*.signupBtn {*/
-/*  display: block;*/
-/*  margin-left: auto;*/
-/*  padding: 1em 3em;*/
-/*  border: none;*/
-/*  background-color: #083d77;*/
-/*  color: white;*/
-/*  border-radius: 0.5em;*/
-/*  cursor: pointer;*/
-/*  font-size: 1em;*/
-/*  margin-top: 3em;*/
-/*}*/
-
-/*.signupBtn:hover {*/
-/*  background-color: #2669f8;*/
-/*}*/
-
-/*.signup-errorMessage {*/
-/*  top: -10em;*/
-/*  right: 0.2em;*/
-/*  padding: 1.5em 0.4em 0em 0.4em;*/
-/*  background-color: white;*/
-/*  color: #eb0404;*/
-/*  font-weight: 500;*/
-/*  font-size: 1em;*/
-/*  z-index: 2;*/
-/*}*/
-
-
 .register {
     width: 100%;
     height: 100%;
@@ -59,7 +7,6 @@
 
 .register-container {
     padding-top: 80px;
-    /*background: #61dafb;*/
 }
 
 .register-heading {
@@ -69,5 +16,3 @@
     margin-left: -20px;
     margin-bottom: 30px;
 }
-
-

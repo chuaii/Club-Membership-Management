@@ -133,12 +133,14 @@ const MainLayout = () => {
             } else if (role === 'Membership Admin' || role === 'System Admin' || role === 'Club Management User') {
                 userData = await userStore.getStaffInfo(loginStore.staff_id)
             }
-            setUserInfo({
-                name: userData.firstname + ' ' + userData.lastname
-            })
+            if (userData) {
+                setUserInfo({
+                    name: userData.firstname + ' ' + userData.lastname
+                })
+            }
         }
         loadInfo()
-    }, [userInfo])
+    }, [role, loginStore.member_id, loginStore.staff_id, userStore])
 
     return (
         <Layout style={{height: "100vh"}}>

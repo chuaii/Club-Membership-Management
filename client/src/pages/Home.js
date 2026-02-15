@@ -38,14 +38,16 @@ export default function Home() {
             } else if (role === 'Membership Admin' || role === 'System Admin' || role === 'Club Management User') {
                 userData = await userStore.getStaffInfo(loginStore.staff_id)
             }
-            setUserInfo({
-                name: userData.firstname + ' ' + userData.lastname,
-                membership: userData.membership_status,
-                expireDate: userData.expire_date
-            })
+            if (userData) {
+                setUserInfo({
+                    name: userData.firstname + ' ' + userData.lastname,
+                    membership: userData.membership_status,
+                    expireDate: userData.expire_date
+                })
+            }
         }
         loadInfo()
-    }, [userInfo])
+    }, [loginStore.user_role, loginStore.member_id, loginStore.staff_id, userStore])
 
     return (
         <div className="home-page">

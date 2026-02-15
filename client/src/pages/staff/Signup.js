@@ -141,7 +141,7 @@ export default function Signup() {
                         label="Role"
                         rules={[{required: true, message: 'Please select role!'}]}
                     >
-                        <Select placeholder="select gender" style={{width: '180px'}}>
+                        <Select placeholder="select role" style={{width: '180px'}}>
                             <Option value="Membership Admin">Membership Admin</Option>
                             <Option value="Club Management User">Club Management User</Option>
                             <Option value="System Admin">System Admin</Option>

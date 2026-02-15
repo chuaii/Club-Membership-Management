@@ -11,7 +11,7 @@ const initSystemAdmin = () => {
     const user_role = userInfo.user_role
 
     // Add system admin staff to the database
-    staffModel.count({staff_id}, (err, result) => {
+    staffModel.countDocuments({staff_id}, (err, result) => {
         if (err) {
             console.log(err)
         }
@@ -32,7 +32,7 @@ const initSystemAdmin = () => {
 
 const initCompanySystem = () => {
     // Initialize default fee
-    feeModel.count({company: company}, (err, result) => {
+    feeModel.countDocuments({company: company}, (err, result) => {
         if (err) {
             console.log('Failed: ', err)
         } else if (result === 0) {  // Initialize default values if this company name doesn't exist

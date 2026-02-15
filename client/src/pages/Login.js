@@ -129,7 +129,7 @@ export default function Login() {
                         <Form.Item name="remember" valuePropName="checked" noStyle>
                             <Checkbox><b>Remember me</b></Checkbox>
                         </Form.Item>
-                        <a className="login-form-forgot" style={{float: 'right'}} onClick={redirectToReset}>
+                        <a className="login-form-forgot" href="#reset" style={{float: 'right'}} onClick={(e) => { e.preventDefault(); redirectToReset(); }}>
                             <b>Forgot password?</b>
                         </a>
                     </Form.Item>
@@ -168,7 +168,7 @@ export default function Login() {
 
             </Form>
             <div style={{marginBottom: 20, fontSize: 'large'}}>
-                Don't have an account? <a onClick={redirectToSignup}><b>Register Now!</b></a>
+                Don't have an account? <a href="#signup" onClick={(e) => { e.preventDefault(); redirectToSignup(); }}><b>Register Now!</b></a>
             </div>
 
             <Space style={{fontSize: 'large'}}>

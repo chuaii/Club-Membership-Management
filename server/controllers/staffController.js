@@ -16,12 +16,12 @@ const getUserById = async (staff_id) => {
 }
 
 /* Update value(s) in the database by given (Obj_id, update object, operation message, response) */
-const updateInfo = (staff_id, update, res) => {
+const updateInfo = (staff_id, update, msg, res) => {
     staffModel.findOneAndUpdate({staff_id}, {...update}, (err) => {
         if (err) {
             return res.handleMessage(err)
         }
-        res.handleMessage('Deactivate staff successfully!', 0)
+        res.handleMessage(`${msg} successfully!`, 0)
     })
 }
 
@@ -32,7 +32,7 @@ exports.signup = (req, res) => {
     const staff_id = userInfo.staff_id
     const user_role = userInfo.user_role
 
-    staffModel.count({staff_id}, (err, result) => {
+    staffModel.countDocuments({staff_id}, (err, result) => {
         if (err) {
             return res.handleMessage(err)
         }
@@ -119,6 +119,7 @@ exports.activateStaff = (req, res) => {
     updateInfo(
         req.body.staff_id,
         {membership_status: true},
+        'Activate staff',
         res
     )
 }
@@ -137,6 +138,7 @@ exports.deactivateStaff = (req, res) => {
     updateInfo(
         req.body.staff_id,
         {membership_status: false},
+        'Deactivate staff',
         res
     )
 }
@@ -172,6 +174,7 @@ exports.updateStaffInfo = (req, res) => {
     updateInfo(
         req.body.staff_id,
         req.body,
+        'Update staff info',
         res
     )
 }

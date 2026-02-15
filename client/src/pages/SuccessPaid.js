@@ -7,7 +7,7 @@ const SuccessPaid = () => (
     <Result
         status="success"
         title="Successfully Purchased Green Space Club Membership!"
-        subTitle="Order number: ???????????????"
+        subTitle="Your payment has been confirmed. Thank you for joining us!"
         style={{margin: 200}}
         extra={[
             <Button type="primary" key="console" size="large" shape="round">

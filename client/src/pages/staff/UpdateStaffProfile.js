@@ -89,7 +89,7 @@ export default function UpdateStaffProfile() {
                     initialValues={{middle_name: ''}}
                     scrollToFirstError
                 >
-                    <div className="register-heading">Register a Staff</div>
+                    <div className="register-heading">Update Staff Profile</div>
                     <Form.Item
                         name="firstname"
                         label="First Name"
@@ -127,7 +127,7 @@ export default function UpdateStaffProfile() {
                         label="Role"
                         rules={[{required: true, message: 'Please select role!'}]}
                     >
-                        <Select placeholder="select gender" style={{width: '200px'}}>
+                        <Select placeholder="select role" style={{width: '200px'}}>
                             <Option value="Membership Admin">Membership Admin</Option>
                             <Option value="Club Management User">Club Management User</Option>
                             <Option value="System Admin">System Admin</Option>

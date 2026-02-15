@@ -6,7 +6,7 @@ const {feeModel} = require('../models')
 exports.updateMembershipFee = (req, res) => {
     feeModel.findOneAndUpdate({company}, {membership_fee: req.body.membership_fee}, (err) => {
         if (err) {
-            res.handleMessage(err)
+            return res.handleMessage(err)
         }
         res.handleMessage('Membership fee updated!', 0)
     })
@@ -16,6 +16,9 @@ exports.updateMembershipFee = (req, res) => {
 exports.getMembershipFee = async (req, res) => {
     const result = await feeModel.findOne({company})
 
+    if (!result) {
+        return res.handleMessage('Company fee information not found!')
+    }
     res.send({
         membership_fee: result.membership_fee
     })

@@ -223,10 +223,12 @@ export default function Profile() {
             } else {
                 profileData = await userStore.getMemberInfo(loginStore.member_id)
             }
-            setProfile({...profileData})
+            if (profileData) {
+                setProfile({...profileData})
+            }
         }
         loadInfo()
-    }, [profile])
+    }, [loginStore.member_id, member_id, userStore])
 
     return (
         <div className="profile-content">
